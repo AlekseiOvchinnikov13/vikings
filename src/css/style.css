@@ -72,7 +72,7 @@ header {
           color: #85CCDC;
           text-decoration: underline; }
   header .logo {
-    padding-top: 180px; }
+    padding-top: 17vh; }
 
 .about__inner {
   display: flex; }
@@ -104,7 +104,7 @@ header {
     font-size: 72px;
     line-height: 84px;
     color: #85CCDC;
-    padding-top: 444px; }
+    padding-top: 45vh; }
     .video__text span {
       display: block;
       padding-right: 285px; }
@@ -123,7 +123,7 @@ header {
 
 .seasons__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   grid-gap: 100px 75px;
   counter-reset: number;
   padding-top: 50px; }
@@ -131,7 +131,6 @@ header {
     content: counter(number); }
 
 .seasons__item {
-  width: 350px;
   height: 250px;
   background-repeat: no-repeat;
   background-position: center;
@@ -181,7 +180,7 @@ header {
   .heroes__slider-img .slick-btn {
     position: absolute;
     top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateY(-50%);
     z-index: 5;
     cursor: pointer;
     background-color: transparent;
@@ -250,6 +249,144 @@ header {
       font-size: 36px;
       line-height: 5px; }
 
+.menu-btn {
+  display: none; }
+
 /* end season 1 */
+@media (max-width: 1366px) {
+  .logo__img {
+    width: 50%; }
+  header .menu__list-link {
+    font-size: 24px;
+    line-height: 32px; }
+  .about__info {
+    flex-basis: 20%; }
+  .about__text {
+    flex-basis: 80%; }
+  .page-header {
+    height: 120vh; }
+  .page-header .page-logo {
+    left: 10px; } }
+
+@media (max-width: 1280px) {
+  .heroes__inner {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; }
+  .section-page {
+    padding: 50px 0; }
+  .title {
+    margin: 50px; }
+  .heroes__slider-img, .heroes__slider-text {
+    max-width: 100%;
+    margin-right: 0; } }
+
+@media (max-width: 1088px) {
+  .seasons__item {
+    height: 340px; }
+  header .menu {
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    background: linear-gradient(180deg, #111213 0, #111213 10.62%, rgba(32, 31, 33, 0) 48.33%); }
+  header .menu__list {
+    flex-direction: column;
+    transform: translateX(100%);
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: all .5s; }
+  header .menu__list-active {
+    display: block;
+    padding: 75px;
+    transform: translateX(0%); }
+  header .menu__list-link {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 15px 10px; }
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    outline: none; }
+    .menu-btn .burger1, .menu-btn .burger2, .menu-btn .burger3 {
+      width: 40px;
+      height: 2px;
+      background-color: white;
+      transition: all .3s; }
+    .menu-btn .burger2 {
+      opacity: 1; }
+  .opened .burger2 {
+    opacity: 0; }
+  .opened .burger1 {
+    transform: rotate(45deg);
+    margin-top: 24px; }
+  .opened .burger3 {
+    transform: rotate(-45deg);
+    margin-bottom: 22px; }
+  .page-header .page-logo {
+    left: 25px;
+    top: 25px; } }
+
+@media (max-width: 768px) {
+  .about__inner {
+    display: block; }
+  .video__text {
+    font-size: 48px;
+    line-height: 56px; }
+  .video__text span {
+    padding-right: 170px; }
+  .video__btn {
+    margin-right: 0;
+    padding-left: 60px; }
+  .video__btn:before {
+    width: 50px;
+    height: 50px;
+    top: -16px;
+    background-size: cover; }
+  .seasons__inner {
+    grid-gap: 80px 35px; }
+  .heroes__slider-text .heroes__text .heroes__name {
+    font-size: 46px;
+    line-height: 64px;
+    margin: 25px 0; }
+  .season-info {
+    padding: 15px 10px 15px 10px; } }
+
+@media (max-width: 640px) {
+  header .logo {
+    padding-top: 21vh; }
+  .season-info {
+    flex-direction: column;
+    align-items: center; }
+  .season-info__num {
+    font-size: 50px;
+    line-height: 100%;
+    margin-right: 0; }
+  .season-info__num span {
+    font-size: 25px;
+    line-height: 5px; } }
+
+@media (max-width: 414px) {
+  .video__text span {
+    padding-right: 20px; }
+  .seasons__item {
+    height: 200px; }
+  .page-header {
+    height: 180vh; } }
+
+@media (max-width: 320px) {
+  .video__btn {
+    margin-right: 8px;
+    padding-left: 60px; }
+  .page-header {
+    height: 245vh; } }
 
 /*# sourceMappingURL=style.css.map */

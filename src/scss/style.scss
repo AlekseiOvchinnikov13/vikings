@@ -48,7 +48,7 @@ header {
   }
 
   .logo {
-    padding-top: 180px;
+    padding-top: 17vh;
   }
 }
 
@@ -94,7 +94,7 @@ header {
     font-size: 72px;
     line-height: 84px;
     color: #85CCDC;
-    padding-top: 444px;
+    padding-top: 45vh;
 
     span {
       display: block;
@@ -122,7 +122,7 @@ header {
 .seasons {
   &__inner {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-gap: 100px 75px;
     counter-reset: number;
     padding-top: 50px;
@@ -133,7 +133,6 @@ header {
   }
 
   &__item {
-    width: 350px;
     height: 250px;
     background-repeat: no-repeat;
     background-position: center;
@@ -197,7 +196,7 @@ header {
     .slick-btn {
       position: absolute;
       top: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateY(-50%);
       z-index: 5;
       cursor: pointer;
       background-color: transparent;
@@ -291,6 +290,10 @@ header {
       line-height: 5px;
     }
   }
+}
+
+.menu-btn {
+  display: none;
 }
 
 /* end season 1 */
